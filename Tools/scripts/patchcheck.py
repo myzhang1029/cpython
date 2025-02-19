@@ -13,7 +13,6 @@ import untabify
 # Excluded directories which are copies of external libraries:
 # don't check their coding style
 EXCLUDE_DIRS = [os.path.join('Modules', '_ctypes', 'libffi'),
-                os.path.join('Modules', '_ctypes', 'libffi_osx'),
                 os.path.join('Modules', '_ctypes', 'libffi_msvc'),
                 os.path.join('Modules', 'expat'),
                 os.path.join('Modules', 'zlib')]
