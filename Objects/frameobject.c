@@ -650,7 +650,7 @@ PyTypeObject PyFrame_Type = {
 
 static PyObject *builtin_object;
 
-int _PyFrame_Init()
+int _PyFrame_Init(void)
 {
     builtin_object = PyString_InternFromString("__builtins__");
     if (builtin_object == NULL)

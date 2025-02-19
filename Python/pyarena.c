@@ -128,7 +128,7 @@ block_alloc(block *b, size_t size)
 }
 
 PyArena *
-PyArena_New()
+PyArena_New(void)
 {
     PyArena* arena = (PyArena *)malloc(sizeof(PyArena));
     if (!arena)

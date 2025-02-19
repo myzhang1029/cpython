@@ -360,7 +360,7 @@ extern int lstat(const char *, struct stat *);
 PyObject *
 _PyInt_FromUid(uid_t uid)
 {
-    if (uid <= LONG_MAX)
+    if (sizeof(uid_t) > sizeof(long) && uid <= LONG_MAX)
         return PyInt_FromLong(uid);
     return PyLong_FromUnsignedLong(uid);
 }
@@ -368,7 +368,7 @@ _PyInt_FromUid(uid_t uid)
 PyObject *
 _PyInt_FromGid(gid_t gid)
 {
-    if (gid <= LONG_MAX)
+    if (sizeof(gid_t) > sizeof(long) && gid <= LONG_MAX)
         return PyInt_FromLong(gid);
     return PyLong_FromUnsignedLong(gid);
 }
@@ -9580,5 +9580,3 @@ INITFUNC(void)
 #ifdef __cplusplus
 }
 #endif
-
-

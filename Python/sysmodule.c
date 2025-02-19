@@ -1184,14 +1184,14 @@ svnversion_init(void)
    Else return Revision of patchlevel.h if on branch.
    Else return empty string */
 const char*
-Py_SubversionRevision()
+Py_SubversionRevision(void)
 {
     svnversion_init();
     return svn_revision;
 }
 
 const char*
-Py_SubversionShortBranch()
+Py_SubversionShortBranch(void)
 {
     svnversion_init();
     return shortbranch;

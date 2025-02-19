@@ -308,7 +308,7 @@ PyThreadState_Delete(PyThreadState *tstate)
 
 #ifdef WITH_THREAD
 void
-PyThreadState_DeleteCurrent()
+PyThreadState_DeleteCurrent(void)
 {
     PyThreadState *tstate = _PyThreadState_Current;
     if (tstate == NULL)
@@ -677,5 +677,3 @@ PyGILState_Release(PyGILState_STATE oldstate)
 #ifdef __cplusplus
 }
 #endif
-
-
